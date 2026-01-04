@@ -1,0 +1,46 @@
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.mobile{
+    width: 320px;
+    height: 568px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(to right,#7E6D53,#2D2A22);
+    @media screen and  (min-width:768px) {
+            display: none;
+    }
+    &__cross{
+        border: none;
+        background-color: $btn-bcg;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    &__icon{
+        fill: $header-fill-color;
+        width: 30px;
+        height: 30px;
+    }
+    &__list{
+        display: flex;
+        gap: 24px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 90px;
+    }
+    &__link{
+        font-family: $second-family;
+font-weight: 400;
+font-size: 16px;
+text-align: center;
+color: $header-link-color;
+    }
+}

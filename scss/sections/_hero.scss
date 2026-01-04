@@ -1,0 +1,89 @@
+.hero {
+  padding-top: 15px;
+  padding-bottom: 60px;
+  background-image: url("../images/mobile/hero/hero-mobile@1x.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url("../images/mobile/hero/hero-mobile@2x.webp");
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 100px;
+    background-image: url("../images/tablet/hero/hero-tablet@1x.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("../images/tablet/hero/hero-tablet@2x.webp");
+    }
+  }
+
+  @media screen and (min-width: 1176px) {
+    background-image: url("../images/desktop/hero/hero-desktop@1x.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("../images/desktop/hero/hero-desktop@2x.webp");
+    }
+  }
+  &__box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 48px;
+    color: $hero-title-color;
+    @media screen and (min-width: 768px) {
+      font-size: 72px;
+    }
+  }
+  &__desc{
+    width: 184px;
+    font-family: $font-family;
+font-weight: 300;
+font-size: 16px;
+text-align: center;
+color: $hero-text-color;
+margin-bottom: 246px;
+@media screen and (min-width: 768px) {
+    width: 484px;
+      font-size: 24px;
+      margin-bottom: 382px;
+    }
+  }
+
+  &__btn{
+    font-family: $font-family;
+font-weight: 300;
+font-size: 20px;
+color: $hero-btn-text;
+border-radius: 16px;
+padding: 14px 28px;
+background-color: $hero-btn-bcg;
+border: none;
+transition-property: color,background-color;
+transition-duration: 300ms;
+transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+&:hover{
+    color: $hero-btn-text-hover;
+    background-color: $hero-btn-bcg-hover;
+}
+@media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+}
